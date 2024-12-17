@@ -714,7 +714,7 @@ struct ContentView: View {
                 
                 if scans.isEmpty {
                     Text("No scans yet")
-                        .font(.custom("YourFontName", size: 20))
+                        .font(.custom("Maqroo-Regular", size: 20))
                         .fontWeight(.bold)
                         .padding()
                 } else {
@@ -722,16 +722,17 @@ struct ContentView: View {
                         NavigationLink(destination: ScrollView {
                             Text(scan.content)
                                 .padding()
-                                .font(.custom("YourFontName", size: 18))
+                                .font(.custom("Maqroo-Regular", size: 18))
                         }) {
                             Text(scan.content)
                                 .lineLimit(1)
-                                .font(.custom("YourFontName", size: 16))
+                                .font(.custom("Maqroo-Regular", size: 16))
                         }
                     }
                 }
             }
             .navigationTitle("Scan OCR")
+            
             .onAppear {
                 self.showScannerSheet = true
             }
@@ -762,7 +763,7 @@ struct ContentView: View {
         let newScan = ScanEntity(content: content)
         modelContext.insert(newScan)
         
-        if scans.count > 7 {
+        if scans.count > 10 {
             if let oldestScan = scans.last {
                 modelContext.delete(oldestScan)
             }
