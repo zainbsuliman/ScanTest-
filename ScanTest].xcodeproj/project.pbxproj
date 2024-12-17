@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB00B76A2D0DDD7300FD4571 /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = DB00B7692D0DDD7300FD4571 /* SwiftyTesseract */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DB00B6F22D0DC93500FD4571 /* ScanTest].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScanTest].app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB00B76A2D0DDD7300FD4571 /* SwiftyTesseract in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "ScanTest]";
 			packageProductDependencies = (
+				DB00B7692D0DDD7300FD4571 /* SwiftyTesseract */,
 			);
 			productName = "ScanTest]";
 			productReference = DB00B6F22D0DC93500FD4571 /* ScanTest].app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = DB00B6E92D0DC93500FD4571;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DB00B7682D0DDD7300FD4571 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB00B6F32D0DC93500FD4571 /* Products */;
 			projectDirPath = "";
@@ -255,6 +264,10 @@
 				DEVELOPMENT_TEAM = CPSJQMMQ8M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ScanTest--Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$ (PRODUCT_NAME)requires permission to scan files";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +297,10 @@
 				DEVELOPMENT_TEAM = CPSJQMMQ8M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ScanTest--Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$ (PRODUCT_NAME)requires permission to scan files";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +341,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB00B7682D0DDD7300FD4571 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyTesseract/SwiftyTesseract";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB00B7692D0DDD7300FD4571 /* SwiftyTesseract */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB00B7682D0DDD7300FD4571 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */;
+			productName = SwiftyTesseract;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB00B6EA2D0DC93500FD4571 /* Project object */;
 }
