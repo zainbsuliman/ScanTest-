@@ -74,3 +74,63 @@
 //        }
 //    }
 //}
+//import SwiftUI
+//import AVFoundation
+//import UIKit
+//import Vision
+//import VisionKit
+//class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
+//    private var captureSession: AVCaptureSession!
+//    private var photoOutput: AVCapturePhotoOutput!
+//    var processCapturedImage: ((UIImage) -> Void)?
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        setupCamera()
+//    }
+//    
+//    private func setupCamera() {
+//        captureSession = AVCaptureSession()
+//        captureSession.sessionPreset = .photo
+//        
+//        guard let backCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back),
+//              let input = try? AVCaptureDeviceInput(device: backCamera),
+//              captureSession.canAddInput(input) else {
+//            print("Unable to access the camera.")
+//            return
+//        }
+//        
+//        captureSession.addInput(input)
+//        photoOutput = AVCapturePhotoOutput()
+//        if captureSession.canAddOutput(photoOutput) {
+//            captureSession.addOutput(photoOutput)
+//        }
+//        
+//        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+//        previewLayer.videoGravity = .resizeAspectFill
+//        previewLayer.frame = view.layer.bounds
+//        view.layer.addSublayer(previewLayer)
+//        
+//        captureSession.startRunning()
+//        
+//        let captureButton = UIButton(frame: CGRect(x: (view.bounds.width - 70) / 2, y: view.bounds.height - 100, width: 70, height: 70))
+//        captureButton.layer.cornerRadius = 35
+//        captureButton.backgroundColor = .white
+//        captureButton.addTarget(self, action: #selector(capturePhoto), for: .touchUpInside)
+//        view.addSubview(captureButton)
+//    }
+//    
+//    @objc private func capturePhoto() {
+//        let settings = AVCapturePhotoSettings()
+//        photoOutput.capturePhoto(with: settings, delegate: self)
+//    }
+//    
+//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+//        guard let imageData = photo.fileDataRepresentation(),
+//              let image = UIImage(data: imageData) else {
+//            return
+//        }
+//        
+//        processCapturedImage?(image)
+//    }
+//}

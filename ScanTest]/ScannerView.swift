@@ -271,5 +271,6 @@ struct ScannerView: UIViewControllerRepresentable {
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
             self.completionHandler(nil)
         }
+        
     }
 }
